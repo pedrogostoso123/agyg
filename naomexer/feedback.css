@@ -1,0 +1,92 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star {
+    font-size: 2em;
+    color: #ccc; /* Cor padrão das estrelas */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold; /* Cor ao passar o mouse por cima */
+    transform: scale(1.1); /* Leve aumento */
+}
+
+input:checked ~ .star {
+    color: gold; /* Estrelas selecionadas ficam douradas */
+}
+
+.star-rating input:checked + label:hover,
+.star-rating input:checked + label:hover ~ .star {
+    color: #ffeb3b; /* Cor mais clara quando já selecionada e passando o mouse */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, rgb(57, 224, 224), #2c76d6);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #2c76d6, rgb(57, 224, 224));
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #82d1e9;
+}
